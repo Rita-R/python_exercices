@@ -75,3 +75,5 @@ def TextoPonto(p):
 Point2D.__str__ = TextoPonto
 print(ponto3)
 #print(TextoPonto(ponto3))
+
+

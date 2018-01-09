@@ -220,52 +220,7 @@ class GroupNetwork:
 # sn.Join("Rose", "Denis")
 # print(sn.AreConnected("Rita", "Rose"))
 
-class HeapTree:
-    def __init__(self):
-        self.v = []
-        self.n = 0
-        pass
 
-    def Insere(self,val):
-        self.v.append(val)
-        self.n = self.n + 1
-        pai = (int)((self.n - 1)/2)
-        while pai != 0:
-            if pai >= 0:
-                if self.v[pai] < self.v[val]:
-                    (self.v[pai], self.v[val]) = (self.v[val], self.v[pai])
-
-    def OlhaTopo(self):
-        return self.v[0]
-
-    def ImprimeHeap(self):
-        print(self.v)
-
-    def RemoveTopo(self):
-        pai = 0
-        (self.v[pai], self.v[self.n]) = (self.v[self.n], self.v[pai])
-        print(v[self.n])
-        self.v.pop()
-        fdir = (2 * self.n) + 2
-        fesq = (2 * self.n) + 1
-        while fesq <= self.n:
-            if fdir <= self.n:
-                if self.v[fesq] < self.v[fdir] and self.v[fesq] < self.v[pai]:
-                    (self.v[fesq], self.v[pai]) = (self.v[pai], self.v[fesq])
-                if self.v[fdir] < self.v[fesq] and self.v[fdir] < self.v[pai]:
-                    (self.v[fdir], self.v[pai]) = (self.v[pai], self.v[fdir])
-            else:
-                if self.v[fesq] < self.v[fdir] and self.v[fesq] < self.v[pai]:
-                    (self.v[fesq], self.v[pai]) = (self.v[pai], self.v[fesq])
-
-heap = HeapTree()
-heap.ImprimeHeap()
-heap.Insere(0)
-heap.Insere(1)
-heap.Insere(2)
-heap.Insere(3)
-heap.Insere(4)
-heap.ImprimeHeap()
 
 
 

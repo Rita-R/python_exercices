@@ -24,6 +24,7 @@ print(X)
 X[0] = -X[0]
 print(X)
 
+v = [0]*10
 print("----------")
 
 for i in range(0, len(X)):
